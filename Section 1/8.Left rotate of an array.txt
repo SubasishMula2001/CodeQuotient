@@ -1,0 +1,20 @@
+class Result {
+  // Do not print anything in the function
+  // Just modify the given array by left rotating it R times
+  public static void reverse(int arr[],int si, int ei){
+    while(si<ei){
+      int temp = arr[si];
+      arr[si] = arr[ei];
+      arr[ei] = temp;
+      si++;
+      ei--;
+    }
+  }
+  static void rotateArray(int[] arr, int R) {
+    // Write your code here
+    int n = arr.length;
+    reverse(arr,0,n-1);
+    reverse(arr,0,n-R-1);
+    reverse(arr,n-R,n-1);
+  }
+}

@@ -1,0 +1,13 @@
+ 
+static int findAverage(int n, int m, int[][] arr) {
+  // Write your code here
+  long sum = 0;
+  for(int i = 0;i<m;i++){
+  int a = arr[i][0];
+  int b = arr[i][1];
+  int k = arr[i][2];
+    sum+=(b-a+1)*k;
+ }
+  long avg = sum/n;
+  return (int)avg;
+} 

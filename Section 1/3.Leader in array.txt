@@ -1,0 +1,36 @@
+class Result{
+  // Return the array that contains leaders
+  static int[] findTheLeaders(int a[], int n){
+    // Write your code here
+    int largest = Integer.MIN_VALUE;
+    for(int i = n-1;i>=0;i--){
+      if(a[i]>largest){
+        largest = a[i];
+        System.out.print(a[i]+" ");
+      }
+    }
+
+  }
+}
+
+
+class Result{
+  // Return the array that contains leaders
+  static int[] findTheLeaders(int a[], int n){
+    // Write your code here
+    ArrayList<Integer> list = new ArrayList<>();
+    int largest = Integer.MIN_VALUE;
+    for(int i = n-1;i>=0;i--){
+      if(a[i]>largest){
+        largest = a[i];
+        list.add(largest);
+      }
+    }
+   Collections.reverse(list);
+    int arr[] = new int[list.size()];
+    for(int i = 0 ;i<list.size();i++){
+      arr[i] = list.get(i);
+    }
+    return arr;
+  }
+}
